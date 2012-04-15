@@ -1,1 +1,1 @@
-<div> <%= @item.get 'name' %><button name="Remove Item" class="remove-item"></div>
+<div> <%= @item.get 'name' %><a class="remove-item"></a></div>

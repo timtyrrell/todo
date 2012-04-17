@@ -10,7 +10,7 @@ class Todo.Views.ItemsIndex extends Backbone.View
     $(@el).html(@template())
 
     countView = new Todo.Views.Count collection: @collection
-    @$('#footer').append(countView.render().el)
+    countView.render()
 
     @collection.each (item) =>
       view = new Todo.Views.Item model: item

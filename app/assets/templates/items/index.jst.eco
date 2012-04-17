@@ -1,3 +1,4 @@
 <label>Add Todo Item:<input id="add-item"/></label>
 <div id="items">
 </div>
+<div id='footer'></div>

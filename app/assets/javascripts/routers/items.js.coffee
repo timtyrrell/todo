@@ -4,4 +4,4 @@ class Todo.Routers.Items extends Backbone.Router
   index: ->
     items = new Todo.Collections.Items
     new Todo.Views.ItemsIndex collection: items
-    items.fetch()
+    items.fetch(reset: true)

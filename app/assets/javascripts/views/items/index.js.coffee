@@ -12,9 +12,11 @@ class Todo.Views.ItemsIndex extends Backbone.View
     countView = new Todo.Views.Count collection: @collection
     countView.render()
 
+    container = document.createDocumentFragment()
     @collection.each (item) =>
       view = new Todo.Views.Item model: item
-      @$('#items').append(view.render().el)
+      container.appendChild(view.render().el)
+    @$('#items').append(container)
     @
   createOnEnter: (event) ->
     return if event.keyCode != 13

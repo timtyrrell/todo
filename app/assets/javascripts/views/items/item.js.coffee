@@ -3,7 +3,7 @@ class Todo.Views.Item extends Backbone.View
   events:
     'click a.remove-item' : 'removeItem'
   initialize: ->
-    @model.bind 'destroy', @remove, @
+    @listenTo @model, 'destroy', @remove
   render: ->
     $(@el).html(@template(item: @model))
     @

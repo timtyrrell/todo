@@ -4,8 +4,8 @@ class Todo.Views.ItemsIndex extends Backbone.View
   events:
     'keypress #add-item' : 'createOnEnter'
   initialize: ->
-    @collection.bind 'reset', @render, @
-    @collection.bind 'add', @addItem, @
+    @listenTo @collection, 'reset', @render
+    @listenTo @collection, 'add', @addItem
   render: ->
     $(@el).html(@template())
 
